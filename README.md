@@ -1,10 +1,14 @@
+*This project has been created as part of the 42 curriculum by clumertz.*
+
 # NetPractice
 
-NetPractice is a networking exercise from 42 School designed to teach and validate core networking concepts through interactive problem-solving. The project progressively introduces IP addressing, subnetting, routing, and packet forwarding using visual network topologies. The goal is to correctly configure IP addresses, subnet masks, and routing tables so that all required hosts can communicate successfully.
+## Description
 
-## Goal
+NetPractice is a networking training project from 42 School designed to teach and validate core networking concepts through interactive, level-based exercises. The project progressively introduces IPv4 addressing, subnetting, routing, and packet forwarding using visual network topologies.
 
-The goal of this project is to study networking through practical exercises, complete all 10 levels, and understand the core concepts of computer networks. Each exercise is described by level in this repository.
+The main goal is to correctly configure IP addresses, subnet masks, default gateways, and routing tables so that all required hosts can communicate successfully across multiple networks.
+
+The training is divided into 10 levels, each increasing in complexity and combining previously learned concepts.
 
 ## Core Concepts
 
@@ -73,3 +77,51 @@ A private IP address is used for internal networks and cannot be accessed direct
 172.16.0.0 – 172.31.255.255
 192.168.0.0 – 192.168.255.255
 ```
+## Instructions
+
+How to Run NetPractice
+
+1. Open the NetPractice training interface provided by 42 (usually via a web interface or index.html).
+2. Select a level and analyze the given network topology.
+3. Configure:
+   - IP addresses
+   - Subnet masks (CIDR)
+   - Default gateways (for hosts)
+   - Routing tables (for routers)
+4. Validate the level by checking connectivity between the required hosts.
+
+Exporting Configurations
+
+- Once a level is successfully completed, export its configuration using the interface’s export feature.
+- The export generates a configuration file representing the solved level.
+
+## Resources
+
+During this project, the following networking concepts are studied and applied:
+
+- IPv4 addressing
+- Subnet masks and CIDR notation
+- Network address and broadcast address
+- Default gateway
+- Routing tables
+- Longest prefix match
+- Point-to-point links
+- Routers and switches
+- Private vs public IP addresses
+- TCP/IP model
+- OSI layers (focus on Layers 2 and 3)
+
+Use of Artificial Intelligence
+
+AI tools were used as a learning assistant to:
+
+- Clarify networking concepts (subnetting, routing, CIDR)
+- Review explanations and correct technical inaccuracies
+- Improve English clarity and README structure
+
+All configurations, calculations, and final solutions were understood and produced by me.
+
+## Submission details
+
+- 10 configuration files are submitted at the root of the repository, one for each level (Level 1 to Level 10).
+- 10 directories are also included, each corresponding to a level and containing a README that explains the solution for that exercise.

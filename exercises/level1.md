@@ -7,6 +7,9 @@
 - Given B1 IP = 104.96.23.12
 
 A /24 subnet provides:
+- 32 - 24 = 8
+- 2^8 = 256
+- Range of 0-255
 - 256 total IP addresses
 - 254 usable host addresses (from 0 - 255)
 - .0 reserved for the network address and .255 reserved for the broadcast address

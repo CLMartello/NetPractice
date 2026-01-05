@@ -11,14 +11,29 @@ The main goal is to correctly configure IP addresses, subnet masks, default gate
 The training is divided into 10 levels, each increasing in complexity and combining previously learned concepts.
 
 ## Core Concepts
+1. TCP/IP Addressing
 
-1. IPv4 Addressing
+TCP/IP is a suite of protocols that allows computers to communicate over networks. Within this model, IP (Internet Protocol) is responsible for addressing and routing packets.
+
+There are two versions of IP used today:
+- IPv4
+- IPv6
+
+2. IPv4 Addressing
 
 An IPv4 address is composed of 4 octets, split into a network part and a host part. IPv4 addresses range from:
 ```css
 0.0.0.0 to 255.255.255.255
 ```
-2. Subnet Masks & CIDR
+Each IP address has two parts:
+- Network part → identifies the network
+- Host part → identifies the device inside that network
+
+Devices can only communicate directly if they are in the same network.
+
+3. Subnet Masks & CIDR
+
+A subnet mask defines which part of the IP address is the network and which part is the host.
 
 CIDR (Classless Inter-Domain Routing) defines how many bits belong to the network and how many bits are available for hosts.
 
@@ -44,30 +59,34 @@ Example:
 ```
 0 and 63, 61 and 127, 128 and 191, and 192 and 255
 ```
-3. Networks
+4. Networks
 
 A network is a group of interfaces that can communicate directly without a router.
 - One physical link means one network
 - Each network has one subnet mask
 - Different networks must not overlap
 
-4. Point-to-point links
+5. Default Gateway
 
-Point-to-point links are direct connections between routers.
+The default gateway is the IP address of the router interface that connects a local network to other networks. If a device wants to reach an IP outside its network, it sends the packet to Default Gateway or Router Interface IP.
+
+6. Routers & point-to-point links
+
+A router connects different networks together. Point-to-point links are direct connections between routers. Routers forwards packets between networks, uses a routing table to decide where packets go, and each router interface belongs to one network.
 - They usually are CIDR /30 or subnet mask 255.255.255.252
 - This provides 4 total IP addresses and 2 usable IP addresses (.253 and .254)
 - This is ideal for router-to-router links because it avoids wasting IP addresses
 
-5. Routing Tables
+7. Routing Tables
 
-A routing table is used to direct traffic across networks.
+A routing table is the map a router uses to direct traffic across networks.
 - Each routing entry contains:
   - A destination network (network address)
   - A subnet mask
   - A next hop (the IP address of the closest router)
 - Routers use this information to determine where packets should be forwarded
 
-6. Private IP Addresses
+8. Private IP Addresses
 
 A private IP address is used for internal networks and cannot be accessed directly from the public Internet. Private IP addresses cannot be used for direct Internet routing.
 
@@ -77,6 +96,13 @@ A private IP address is used for internal networks and cannot be accessed direct
 172.16.0.0 – 172.31.255.255
 192.168.0.0 – 192.168.255.255
 ```
+
+9. OSI Layers
+
+The OSI model explains how data moves through a network, from hardware to applications. For NetPractice, the most important are:
+- Layer 3 (Network): IP addresses, routing
+- Layer 2 (Data Link): switches, same network logic
+
 ## Instructions
 
 How to Run NetPractice
@@ -110,6 +136,10 @@ During this project, the following networking concepts are studied and applied:
 - Private vs public IP addresses
 - TCP/IP model
 - OSI layers (focus on Layers 2 and 3)
+
+References
+- The playlist You Suck at Subnetting by NetworkChuck.
+- Computer Networking: A Top-Down Approach — Kurose & Ross
 
 Use of Artificial Intelligence
 

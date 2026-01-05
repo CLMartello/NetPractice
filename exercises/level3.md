@@ -4,9 +4,9 @@
 A switch connects multiple devices within the same network, meaning all devices share the same subnet and all devices use the same subnet mask.
 
 ## Network 1
-Interfaces: A1, B1 and C1 (connected through a switch)
-Subnet Mask: 255.255.255.128
-CIDR: /25
+- Interfaces: A1, B1 and C1 (connected through a switch)
+- Subnet Mask: 255.255.255.128
+- CIDR: /25
 
 A /25 subnet provides:
 - 32- 25 = 7

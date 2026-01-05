@@ -15,7 +15,7 @@ A /25 subnet provides:
 - 126 usable host addresses
 - Subnet ranges:
 ```
-0-217 and 128-255
+0-127 and 128-255
 ```
 Solution
 - Given A2 IP = 104.198.9.125
